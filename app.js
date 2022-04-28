@@ -1,4 +1,5 @@
 const { Telegraf } = require('telegraf');
+const cool = require('cool-ascii-faces');
 const token = process.env.TOKEN;
 
 const bot = new Telegraf(token);
@@ -27,6 +28,7 @@ bot.command('where', (ctx) =>
 bot.command('email', (ctx) =>
   ctx.reply('my email is akmalluthfi19@gmail.com.')
 );
+bot.command('expression', (ctx) => ctx.reply(cool()));
 bot.command('secret', (ctx) => {
   console.log(ctx);
 });
