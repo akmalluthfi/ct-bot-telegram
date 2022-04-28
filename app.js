@@ -13,6 +13,7 @@ bot.help((ctx) =>
   ctx.reply('just write "/" to find out what commands are available')
 );
 
+// Custom Commands
 bot.command('name', (ctx) =>
   ctx.reply('Hi, my name is Akmal Luthfi, you can call me akmal')
 );
