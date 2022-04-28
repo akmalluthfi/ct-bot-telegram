@@ -1,0 +1,14 @@
+{
+  "name": "who-is-akmal_bot",
+  "version": "1.0.0",
+  "description": "Telegram bot",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Akmal Luthfi",
+  "license": "ISC",
+  "dependencies": {
+    "telegraf": "^4.7.0"
+  }
+}
