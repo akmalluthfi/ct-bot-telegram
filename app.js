@@ -1,6 +1,22 @@
-const { Telegraf } = require('telegraf');
+const http = require('http');
+
+const hostname = '127.0.0.1';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello, World!\n');
+});
+
+server.listen(port, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+
+const { Telegraf, Markup } = require('telegraf');
 const cool = require('cool-ascii-faces');
-const token = process.env.TOKEN;
+const token =
+  process.env.TOKEN || '5363464224:AAE7yDsh6lF-60Q2fwlFhtW32fwkL2-2t8U';
 const bot = new Telegraf(token);
 
 // Global Commands
@@ -12,6 +28,11 @@ bot.start((ctx) =>
 bot.help((ctx) =>
   ctx.reply('just write "/" to find out what commands are available')
 );
+
+// Keyboard Markup
+// bot.on('message', (ctx) => {
+//   ctx.reply('enter', Markup.keyboard(['on', 'message']));
+// });
 
 // Custom Commands
 bot.command('name', (ctx) =>
@@ -28,9 +49,6 @@ bot.command('email', (ctx) =>
   ctx.reply('my email is akmalluthfi19@gmail.com.')
 );
 bot.command('expression', (ctx) => ctx.reply(cool()));
-bot.command('secret', (ctx) => {
-  console.log(ctx);
-});
 
 bot.launch();
 
