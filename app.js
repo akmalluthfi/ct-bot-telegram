@@ -1,7 +1,6 @@
 const { Telegraf } = require('telegraf');
 const cool = require('cool-ascii-faces');
 const token = process.env.TOKEN;
-
 const bot = new Telegraf(token);
 
 // Global Commands
