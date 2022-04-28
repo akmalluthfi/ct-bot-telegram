@@ -1,7 +1,7 @@
 const { Telegraf } = require('telegraf');
 const token = process.env.TOKEN;
 
-// console.log(process.env.token);
+// console.log(process.env.TOKEN);
 const bot = new Telegraf(token);
 
 bot.start((ctx) => ctx.reply('Welcome'));
