@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+      }
+
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      blockquote,
+      q {
+        quotes: none;
+      }
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: '';
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      * {
+        font-family: 'Rubik', sans-serif;
+      }
+
+      .container {
+        padding: 20px;
+      }
+
+      th {
+        font-weight: normal;
+      }
+
+      body {
+        background-color: #e5e4ea;
+      }
+
+      .sidebar {
+        background-color: #434244;
+        width: 30%;
+        color: #fff;
+      }
+
+      .content {
+        background-color: #fff;
+        vertical-align: text-top;
+        padding: 50px;
+        text-align: left;
+      }
+
+      .main-table {
+        width: 1000px;
+        border: 1px;
+        margin: auto;
+      }
+
+      .container {
+        width: 540px;
+      }
+
+      .img-sidebar {
+        border-radius: 50%;
+        width: 150px;
+      }
+
+      .sidebar-content {
+        padding: 50px 20px;
+      }
+
+      .profile-name {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        margin-top: 30px;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+      }
+
+      .profile-name div {
+        font-size: 2rem;
+      }
+
+      .profile,
+      .contact {
+        margin-top: 50px;
+      }
+
+      .item-container {
+        padding: 20px 25px;
+      }
+
+      .list-contact li {
+        margin: 10px;
+      }
+
+      .title {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        width: 40%;
+        padding-bottom: 5px;
+        text-align-last: center;
+        margin-bottom: 30px;
+        font-size: x-large;
+      }
+
+      .body {
+        padding: 0px 50px;
+      }
+
+      .body-items {
+        margin-bottom: 30px;
+      }
+
+      .content-items {
+        margin-bottom: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <table cellspacing="0" class="main-table">
+      <tr class="container">
+        <th class="sidebar">
+          <div class="sidebar-content">
+            <img
+              src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=200&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFwdG9wfHx8fHx8MTY1MjA3NTgzMg&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=200"
+              class="img-sidebar"
+            />
+
+            <div class="profile-name">
+              <div>Akmal</div>
+              <div>Luthfi</div>
+            </div>
+
+            <p>Web Developer</p>
+
+            <div class="profile">
+              <div class="profile-name">PROFILE</div>
+              <div class="item-container">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Aliquid, fugit ab? Impedit, dolores iste neque incidunt
+                  maxime, voluptas sequi cupiditate veritatis exercitationem
+                  aspernatur magni qui delectus soluta rerum quasi quod!
+                </p>
+              </div>
+            </div>
+
+            <div class="contact">
+              <div class="profile-name">CONTACT</div>
+              <div class="item-container">
+                <ul class="list-contact">
+                  <li>No.telp : 09876545</li>
+                  <li>Email : akmal@gmail.com</li>
+                  <li>Alamat : Surabaya, Indonesia</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </th>
+        <th class="content">
+          <div class="content-items">
+            <h1 class="title">Work Experience</h1>
+            <div class="body">
+              <div>Web Developer</div>
+              <div>Company name | 1200 - 900 Masehi</div>
+              <p style="margin-top: 15px">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Doloribus, esse?
+              </p>
+            </div>
+          </div>
+          <div class="content-items">
+            <h1 class="title">Education</h1>
+            <div class="body">
+              <div class="body-items">
+                <div>Web Developer</div>
+                <div>University name | 1200 - 900 Masehi</div>
+                <p style="margin-top: 15px">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloribus, esse?
+                </p>
+              </div>
+
+              <div class="body-items">
+                <div>Web Developer</div>
+                <div>University name | 1200 - 900 Masehi</div>
+                <p style="margin-top: 15px">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloribus, esse?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="content-items">
+            <h1 class="title">Skills</h1>
+            <div class="body">
+              <ul class="list-contact">
+                <li>Javascript - Native</li>
+                <li>PHP - Professional</li>
+                <li>SilverStripe - Basic</li>
+                <li>Jquery - Basic</li>
+                <li>Bootstrap - Basic</li>
+              </ul>
+            </div>
+          </div>
+        </th>
+      </tr>
+    </table>
+  </body>
+</html>
