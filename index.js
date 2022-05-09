@@ -3,22 +3,33 @@ const token =
   process.env.BOT_TOKEN || '5363464224:AAE7yDsh6lF-60Q2fwlFhtW32fwkL2-2t8U';
 const bot = new Telebot(token);
 
-const { push, firstKey, onProfile } = require('./controller');
+require('./pdfController');
+
+const { push, onProfile } = require('./TelebotController');
 
 let state = [];
 
-bot.on('/start', ({ from }) => {
-  const replyMarkup = bot.keyboard([['My Profile', 'Social Media']], {
+const mainKeyboard = bot.keyboard(
+  [['My Profile', 'Social Media'], ['Download Resume']],
+  {
     resize: true,
-  });
+  }
+);
+
+bot.on('/start', ({ from }) => {
+  const replyMarkup = mainKeyboard;
 
   const text = `Hello ${from.first_name} ${from.last_name}, I will help you to know more about me`;
 
   return bot.sendMessage(from.id, text, { replyMarkup });
 });
 
+bot.on(/(Download Resume)/, (msg) => {
+  return bot.sendDocument(msg.from.id, './data/output.pdf');
+});
+
 bot.on(/(My Profile)/, (msg) => {
-  let replyMarkup = bot.keyboard(
+  const replyMarkup = bot.keyboard(
     [['/name', '/where'], ['/age', '/birth'], ['/email']],
     { resize: true }
   );
@@ -71,36 +82,57 @@ bot.on(/(Social Media)/, (msg) => {
 bot.on('/name', (msg) => {
   if (!onProfile(msg.from.id)) return;
 
-  return firstKey(
+  const replyMarkup = mainKeyboard;
+  return bot.sendMessage(
     msg.from.id,
-    'Hi, my name is Akmal Luthfi, you can call me akmal'
+    'Hi, my name is Akmal Luthfi, you can call me akmal',
+    {
+      replyMarkup,
+    }
   );
 });
 
 bot.on('/birth', (msg) => {
   if (!onProfile(msg.from.id)) return;
 
-  return firstKey(
+  const replyMarkup = mainKeyboard;
+  return bot.sendMessage(
     msg.from.id,
-    'I was born in Surabaya, on December 19th, 2004.'
+    'I was born in Surabaya, on December 19th, 2004.',
+    {
+      replyMarkup,
+    }
   );
 });
 
 bot.on('/email', (msg) => {
   if (!onProfile(msg.from.id)) return;
-  return firstKey(msg.from.id, 'my email is akmalluthfi19@gmail.com.');
+
+  const replyMarkup = mainKeyboard;
+  return bot.sendMessage(msg.from.id, 'my email is akmalluthfi19@gmail.com.', {
+    replyMarkup,
+  });
 });
 
 bot.on('/age', (msg) => {
   if (!onProfile(msg.from.id)) return;
-  return firstKey(msg.from.id, 'I am 17 years old.');
+
+  const replyMarkup = mainKeyboard;
+  return bot.sendMessage(msg.from.id, 'I am 17 years old.', {
+    replyMarkup,
+  });
 });
 
 bot.on('/where', (msg) => {
   if (!onProfile(msg.from.id)) return;
-  return firstKey(
+
+  const replyMarkup = mainKeyboard;
+  return bot.sendMessage(
     msg.from.id,
-    'Currently, I live in Surabaya, East Java - Indonesia.'
+    'Currently, I live in Surabaya, East Java - Indonesia.',
+    {
+      replyMarkup,
+    }
   );
 });
 

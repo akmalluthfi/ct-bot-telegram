@@ -10,6 +10,7 @@
   "author": "Akmal Luthfi",
   "license": "ISC",
   "dependencies": {
+    "pdf-creator-node": "^2.3.4",
     "telebot": "^1.4.1"
   }
 }
