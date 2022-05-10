@@ -1,6 +1,5 @@
 const Telebot = require('telebot');
-const token =
-  process.env.BOT_TOKEN || '5363464224:AAE7yDsh6lF-60Q2fwlFhtW32fwkL2-2t8U';
+const token = process.env.BOT_TOKEN;
 const bot = new Telebot(token);
 
 require('./pdfController');
